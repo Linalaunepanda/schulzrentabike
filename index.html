@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schulz & Junior - rent a bike Mallorca</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Toolbar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="logo.png" alt="Schulz Rent a bike" height="40" />
+        <span>Schulz & Junior - rent a bike Mallorca</span>
+      </div>
+      <ul class="navbar-menu">
+        <li class="dropdown">
+          <a href="#">Bikes</a>
+          <ul class="dropdown-content">
+            <li><a href="#">City Bike</a></li>
+            <li><a href="#">Mountain Bike</a></li>
+            <li><a href="#">E-Bike</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Motos</a>
+          <ul class="dropdown-content">
+            <li><a href="#">125cc Moto</a></li>
+            <li><a href="#">250cc Moto</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Scooters</a>
+          <ul class="dropdown-content">
+            <li><a href="#">50cc Scooter</a></li>
+            <li><a href="#">E-Scooter</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="navbar-contact">
+        <a href="#kontakt" class="contact-btn">Jetzt mieten / Kontakt</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Fahrradverleih auf Mallorca</h1>
+      <p>
+        Entdecke Mallorca flexibel und nachhaltig mit unseren Bikes, Motos und
+        Scooters!
+      </p>
+      <a href="#kontakt" class="hero-btn">Jetzt mieten</a>
+    </header>
+
+    <!-- Produkte Section -->
+    <section class="products">
+      <h2>Unsere Fahrzeuge</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="citybike.jpg" alt="City Bike" />
+          <h3>City Bike</h3>
+          <p>Ideal für entspannte Touren durch die Stadt.</p>
+        </div>
+        <div class="product-card">
+          <img src="mountainbike.jpg" alt="Mountain Bike" />
+          <h3>Mountain Bike</h3>
+          <p>Für Abenteuer abseits der Straßen.</p>
+        </div>
+        <div class="product-card">
+          <img src="ebike.jpg" alt="E-Bike" />
+          <h3>E-Bike</h3>
+          <p>Mit elektrischer Unterstützung für längere Strecken.</p>
+        </div>
+        <div class="product-card">
+          <img src="moto125.jpg" alt="125cc Moto" />
+          <h3>125cc Moto</h3>
+          <p>Schnell und flexibel unterwegs.</p>
+        </div>
+        <div class="product-card">
+          <img src="scooter.jpg" alt="Scooter" />
+          <h3>Scooter</h3>
+          <p>Perfekt für kurze Wege und Stadtfahrten.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hotel Button -->
+    <section class="hotel-section">
+      <a href="https://www.booking.com/" target="_blank" class="hotel-btn">
+        du suchst noch ein Hotel? Klick hier!
+      </a>
+    </section>
+
+    <!-- Kontaktformular -->
+    <section id="kontakt" class="contact-section">
+      <h2>Kontakt & Buchung</h2>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Nachricht / Anfrage:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Schulz & Junior - rent a bike Mallorca</p>
+    </footer>
+  </body>
+</html>
