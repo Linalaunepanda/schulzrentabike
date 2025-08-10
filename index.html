@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Schulz & Junior - rent a bike Mallorca</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts: Playfair Display für klassisch/stilvoll -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Toolbar -->
     <nav class="navbar">
       <div class="navbar-logo">
-        <img src="logo.png" alt="Schulz Rent a bike" height="40" />
-        <span>Schulz & Junior - rent a bike Mallorca</span>
+        <img src="css/images/logo1.png" alt="Schulz Rent a bike" height="40" />
+    
       </div>
       <ul class="navbar-menu">
         <li class="dropdown">
@@ -38,48 +40,80 @@
         </li>
       </ul>
       <div class="navbar-contact">
-        <a href="#kontakt" class="contact-btn">Jetzt mieten / Kontakt</a>
+        <a href="#kontakt" class="contact-btn">Jetzt mieten </a>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
-      <h1>Fahrradverleih auf Mallorca</h1>
-      <p>
-        Entdecke Mallorca flexibel und nachhaltig mit unseren Bikes, Motos und
-        Scooters!
-      </p>
-      <a href="#kontakt" class="hero-btn">Jetzt mieten</a>
+    <header class="hero" style="background-image: url('css/images/1.jpg'); background-size: cover; background-position: center;">
+      <div class="hero-overlay simple">
+        <h1 class="hero-title">Entdecke Mallorca auf zwei Rädern</h1>
+      </div>
     </header>
 
     <!-- Produkte Section -->
     <section class="products">
       <h2>Unsere Fahrzeuge</h2>
-      <div class="product-list">
-        <div class="product-card">
-          <img src="citybike.jpg" alt="City Bike" />
-          <h3>City Bike</h3>
-          <p>Ideal für entspannte Touren durch die Stadt.</p>
-        </div>
-        <div class="product-card">
-          <img src="mountainbike.jpg" alt="Mountain Bike" />
-          <h3>Mountain Bike</h3>
-          <p>Für Abenteuer abseits der Straßen.</p>
-        </div>
-        <div class="product-card">
-          <img src="ebike.jpg" alt="E-Bike" />
-          <h3>E-Bike</h3>
-          <p>Mit elektrischer Unterstützung für längere Strecken.</p>
-        </div>
-        <div class="product-card">
-          <img src="moto125.jpg" alt="125cc Moto" />
-          <h3>125cc Moto</h3>
-          <p>Schnell und flexibel unterwegs.</p>
-        </div>
-        <div class="product-card">
-          <img src="scooter.jpg" alt="Scooter" />
-          <h3>Scooter</h3>
-          <p>Perfekt für kurze Wege und Stadtfahrten.</p>
+      <div class="product-gallery-wrapper">
+        <button class="scroll-arrow right" aria-label="Weiter">&#8594;</button>
+        <div class="product-gallery">
+          <div class="product-category">
+            <h3>Fahrräder</h3>
+            <div class="product-list horizontal-scroll">
+              <div class="product-card">
+                <img src="citybike.jpg" alt="Citybike 26 Zoll" />
+                <h4>Citybike 26 Zoll</h4>
+                <p class="price">ab 12€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+              <div class="product-card">
+                <img src="mountainbike.jpg" alt="Mountainbike 29 Zoll" />
+                <h4>Mountainbike 29 Zoll</h4>
+                <p class="price">ab 15€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+              <div class="product-card">
+                <img src="ebike.jpg" alt="E-Bike" />
+                <h4>E-Bike</h4>
+                <p class="price">ab 22€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-category">
+            <h3>Roller</h3>
+            <div class="product-list horizontal-scroll">
+              <div class="product-card">
+                <img src="scooter50.jpg" alt="50cc Scooter" />
+                <h4>50cc Scooter</h4>
+                <p class="price">ab 18€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+              <div class="product-card">
+                <img src="escooter.jpg" alt="E-Scooter" />
+                <h4>E-Scooter</h4>
+                <p class="price">ab 20€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-category">
+            <h3>Motorräder</h3>
+            <div class="product-list horizontal-scroll">
+              <div class="product-card">
+                <img src="moto125.jpg" alt="125cc Moto" />
+                <h4>125cc Moto</h4>
+                <p class="price">ab 28€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+              <div class="product-card">
+                <img src="moto250.jpg" alt="250cc Moto" />
+                <h4>250cc Moto</h4>
+                <p class="price">ab 35€/Tag</p>
+                <a href="#" class="product-btn">Mehr erfahren</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
