@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kalkhoff Agattu 7 – Schulz & Junior</title>
+
+  <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body class="product-page"><!-- NUR EIN body! -->
+
+  <!-- Neuer, isolierter Header nur für Produktseiten -->
+  <header class="p-header" role="banner">
+    <div class="p-header__inner p-container">
+      <a class="p-logo" href="index.html">
+        <img class="p-logo__img" src="css/images/logo1.png" alt="Schulz & Junior Logo">
+      </a>
+
+      <nav class="p-nav" aria-label="Hauptnavigation">
+        <ul class="p-menu">
+          <li class="p-item p-has-sub">
+            <a class="p-link" href="#">Bikes</a>
+            <ul class="p-submenu">
+              <li><a href="category-citybikes.html">Citybikes</a></li>
+              <li><a href="category-trekking.html">Trekking</a></li>
+              <li><a href="category-ebikes.html">E-Bikes</a></li>
+            </ul>
+          </li>
+          <li class="p-item p-has-sub">
+            <a class="p-link" href="#">Motos</a>
+            <ul class="p-submenu">
+              <li><a href="category-moto-125.html">125cc</a></li>
+              <li><a href="category-moto-touring.html">Tourer</a></li>
+            </ul>
+          </li>
+          <li class="p-item p-has-sub">
+            <a class="p-link" href="#">Scooters</a>
+            <ul class="p-submenu">
+              <li><a href="category-scoot-50.html">50cc</a></li>
+              <li><a href="category-scoot-125.html">125cc</a></li>
+              <li><a href="category-scoot-electric.html">E-Scooter</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="p-cta" href="#anfrage">Jetzt mieten</a>
+    </div>
+  </header>
+
+  <!-- PRODUKT-KOPF -->
+  <section class="product-head container">
+    <div class="grid">
+      <!-- Galerie -->
+      <!-- EINZELBILD statt Galerie -->
+<section class="product-media" aria-label="Produktbild">
+  <div class="media-frame">
+    <img
+      class="media-img"
+      src="css/images/kalkoff.png"
+      alt="Kalkhoff Agattu 7 – Seitenansicht"
+      loading="eager"
+      decoding="async"
+    >
+  </div>
+</section>
+
+      <!-- Text/Preis -->
+      <aside class="summary">
+        <h1 class="title">Kalkhoff Agattu 7</h1>
+        <p class="subtitle">Komfortables Citybike mit 7-Gang-Nabenschaltung – ideal für Promenade & Stadt.</p>
+
+        <div class="price-block">
+          <div class="price">ab <strong>14 €</strong> / Tag</div>
+          <div class="note">Kaution frei · Versicherung inkl.</div>
+        </div>
+
+        <ul class="features">
+          <li>⚙️ 7-Gang Nexus</li>
+          <li>🛋️ Aufrechte Sitzposition</li>
+          <li>💡 Feste Lichtanlage</li>
+          <li>🔒 Rahmenschloss inkl.</li>
+        </ul>
+
+        <p class="intro">
+          Leichtgängiges Citybike für entspannte Touren in Cala Ratjada. Ideal für Strandpromenade,
+          kurze Besorgungen und Tagesausflüge entlang der Küste.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#anfrage">Verfügbarkeit prüfen</a>
+          <a class="btn btn-secondary" href="category-citybikes.html">← Zur Übersicht</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SPECS & EXTRAS -->
+  <main class="container product-body">
+    <section class="card specs" aria-label="Technische Daten">
+      <h2 class="card-title">Technische Daten</h2>
+      <table>
+        <tr><th>Rahmengrößen</th><td>45 / 50 / 55 cm</td></tr>
+        <tr><th>Schaltung</th><td>Shimano Nexus 7-Gang (Nabe)</td></tr>
+        <tr><th>Bremsen</th><td>V-Brake vorne &amp; hinten</td></tr>
+        <tr><th>Gabel</th><td>Starr, city-optimiert</td></tr>
+        <tr><th>Bereifung</th><td>28″ pannensicher</td></tr>
+        <tr><th>Gewicht</th><td>~16 kg</td></tr>
+        <tr><th>Inklusive</th><td>Gepäckträger, Ständer, Klingel, Licht</td></tr>
+      </table>
+    </section>
+
+    <section id="anfrage" class="card extras" aria-label="Extras & Anfrage">
+      <h2 class="card-title">Extras (optional)</h2>
+      <div class="extras-grid">
+        <article class="extra">
+          <img src="images/extra-basket.jpg" alt="Vorderkorb" class="extra-img">
+          <div class="extra-info">
+            <h3 class="extra-title">Korb (vorne)</h3>
+            <p class="extra-price">+ 2 € / Tag</p>
+          </div>
+        </article>
+        <article class="extra">
+          <img src="images/extra-childseat.jpg" alt="Kindersitz" class="extra-img">
+          <div class="extra-info">
+            <h3 class="extra-title">Kindersitz (bis 22 kg)</h3>
+            <p class="extra-price">+ 4 € / Tag</p>
+          </div>
+        </article>
+        <article class="extra">
+          <img src="images/extra-helmet.jpg" alt="Fahrradhelm" class="extra-img">
+          <div class="extra-info">
+            <h3 class="extra-title">Helm (versch. Größen)</h3>
+            <p class="extra-price">+ 2 € / Tag</p>
+          </div>
+        </article>
+        <article class="extra">
+          <img src="images/extra-lock.jpg" alt="Zusatzschloss" class="extra-img">
+          <div class="extra-info">
+            <h3 class="extra-title">Zusatzschloss</h3>
+            <p class="extra-price">+ 1 € / Tag</p>
+          </div>
+        </article>
+      </div>
+
+      <form class="booking-inline" onsubmit="event.preventDefault(); alert('Anfrage gesendet ✌️');">
+        <label>Abholung <input type="date" required></label>
+        <label>Rückgabe <input type="date" required></label>
+        <label>Rahmengröße
+          <select required>
+            <option value="">Bitte wählen</option>
+            <option>45 cm</option>
+            <option>50 cm</option>
+            <option>55 cm</option>
+          </select>
+        </label>
+        <button class="btn btn-primary" type="submit">Anfrage senden</button>
+      </form>
+      <p class="note">Unverbindlich · Zahlung vor Ort · Abbildungen beispielhaft</p>
+    </section>
+
+   <section class="usps">
+  <div class="usp"><span class="usp-icon" aria-hidden="true"></span> Flexible Mietdauer: 1–14 Tage</div>
+  <div class="usp"><span class="usp-icon" aria-hidden="true"></span> Gewartet & geprüft vor jeder Übergabe</div>
+  <div class="usp"><span class="usp-icon" aria-hidden="true"></span> Abholung nahe Strandpromenade Cala Ratjada</div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">AGB</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <p>&copy; 2025 Schulz & Junior – Rent a Bike Mallorca</p>
+    </div>
+  </footer>
+
+  <!-- JS: nur p-header + Galerie -->
+  <script>
+    // Header-Schatten
+    window.addEventListener('scroll', ()=>{
+      document.querySelector('.p-header')?.classList.toggle('is-scrolled', window.scrollY>20);
+    });
+
+    // Galerie Switch
+    const mainImg = document.getElementById('mainImg');
+    document.querySelectorAll('.thumb img').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        document.querySelectorAll('.thumb').forEach(b=>b.classList.remove('active'));
+        img.closest('.thumb').classList.add('active');
+        if(mainImg){ mainImg.src = img.dataset.big; mainImg.alt = img.alt; }
+      });
+    });
+  </script>
+</body>
+</html>

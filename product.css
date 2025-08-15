@@ -1,0 +1,359 @@
+/* =========================================================
+   PRODUCT.CSS — isoliert, nutzt Inter + Playfair Display
+   ========================================================= */
+
+/* Vars (greifen auf dieselben Farben wie style.css zu) */
+:root{
+  --rot:#e6392d;
+  --text:#111;
+  --muted:#666;
+  --border:#eaeaea;
+  --bg:#fff;
+  --bg-soft:#fafafa;
+}
+
+/* Base */
+*{box-sizing:border-box}
+img{max-width:100%;display:block;height:auto}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body.product-page{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--text);
+  background:#fff; /* dein Body in style.css setzt ohnehin weiß */
+  line-height:1.6;
+}
+
+/* =========================================================
+   FIXER PRODUKT-HEADER (p-*) — eigens, kollisionsfrei
+   ========================================================= */
+.p-container{max-width:1200px;margin:0 auto;padding:0 12px}
+
+.p-header{
+  position:fixed; inset:0 0 auto 0; z-index:999;
+  background:#fff; border-bottom:1px solid var(--border);
+  transition: box-shadow .25s ease;
+}
+.p-header.is-scrolled{ box-shadow:0 6px 20px rgba(0,0,0,.06); }
+
+.p-header__inner{
+  height:68px; display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+
+.p-logo__img{ height:150px; width:auto; display:block; }
+
+/* Navigation */
+.p-nav{ display:block; }
+.p-menu{ display:flex; gap:22px; margin:0; padding:0; list-style:none; align-items:center; }
+.p-item{ position:relative; }
+.p-link, .p-submenu a{
+  font-family:'Inter',system-ui,sans-serif;
+  font-weight:600; color:#111; text-decoration:none; display:inline-flex; align-items:center;
+  padding:8px 2px; letter-spacing:.01em;
+}
+
+/* Dropdown */
+.p-submenu{
+  position:absolute; left:0; top:calc(100% + 8px);
+  min-width:200px; padding:8px; margin:0; list-style:none;
+  background:#fff; border:1px solid #eee; border-radius:12px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08); display:none;
+}
+.p-submenu a{ display:block; padding:8px 10px; border-radius:8px; }
+.p-submenu a:hover{ background:#f5f5f5; }
+@media (hover:hover) and (pointer:fine){
+  .p-has-sub:hover>.p-submenu{ display:block; }
+}
+
+/* CTA */
+.p-cta{
+  font-family:'Inter',system-ui,sans-serif; font-weight:700; letter-spacing:.01em;
+  background:#f9b233; color:#000; text-decoration:none;
+  padding:9px 12px; border-radius:10px; border:0; display:inline-flex;
+}
+
+/* Abstand unter fester Leiste */
+body.product-page{ padding-top:84px; }          /* ggf. 72–100 anpassen */
+body.product-page .product-head{ margin-top:12px; }
+
+/* =========================================================
+   PRODUKT-KOPF (Galerie links, Text rechts)
+   ========================================================= */
+.container{max-width:1200px;margin:0 auto;padding:0 12px}
+
+.product-head .grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;
+}
+
+/* Galerie */
+.gallery .stage{
+  position:relative;
+  background:#fff; border:1px solid var(--border); border-radius:16px;
+  padding:10px; box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+.gallery .main{
+  width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px;
+  max-height:320px;
+  font-size:0; color:transparent; /* falls Bildpfad mal 404 ist → keinen Alt-Text zeigen */
+}
+
+/* Thumbnails */
+.thumbs{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
+.thumb{-webkit-appearance:none;appearance:none;border:0;background:transparent;padding:0;cursor:pointer;border-radius:10px}
+.thumb img{
+  display:block; width:96px; height:72px; object-fit:cover; border-radius:10px;
+  border:2px solid transparent; background:#f2f2f2; transition:transform .15s,border-color .15s;
+  font-size:0; color:transparent;
+}
+.thumb:hover img{ transform:translateY(-1px) }
+.thumb:focus-visible img{ outline:2px solid var(--rot); outline-offset:2px }
+.thumb.active img{ border-color:var(--rot) }
+
+/* Summary (rechts) */
+.summary .title{
+  font-family:'Playfair Display',serif; font-weight:700; letter-spacing:-.01em;
+  font-size:clamp(28px,3.6vw,40px); line-height:1.2; margin:0 0 6px;
+}
+.summary .subtitle{ color:var(--muted); margin:4px 0 12px; font-family:'Inter',system-ui,sans-serif; }
+.price-block{ display:grid; gap:4px; margin:6px 0 14px; }
+.price{ font-size:20px; font-family:'Inter',system-ui,sans-serif; font-variant-numeric:tabular-nums; }
+.price strong{ font-size:22px; }
+.note{ font-size:14px; color:var(--muted); }
+.features{ list-style:none; padding:0; margin:0 0 14px; display:grid; gap:6px; }
+.intro{ margin:8px 0 14px; }
+.cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
+
+/* Buttons (nutzen globale .btn-Stile, nur typografisch angleichen) */
+.btn{ font-family:'Inter',system-ui,sans-serif; font-weight:700; letter-spacing:.01em; }
+
+/* =========================================================
+   CONTENT-KARTEN (Specs / Extras / USPs)
+   ========================================================= */
+.product-body{ display:grid; grid-template-columns:1fr; gap:18px; margin:20px 0 28px; }
+.card{
+  background:#fff; border:1px solid var(--border); border-radius:16px;
+  box-shadow:0 10px 28px rgba(0,0,0,.05); padding:14px;
+}
+.card-title{
+  font-family:'Playfair Display',serif; font-weight:700; letter-spacing:-.01em;
+  font-size:20px; margin:2px 0 10px;
+}
+
+/* Specs */
+.specs table{ width:100%; border-collapse:collapse; font-size:15.5px; }
+.specs th,.specs td{ padding:12px 14px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; }
+.specs th{ width:36%; background:var(--bg-soft); color:#333; font-weight:600; }
+
+/* Extras */
+.extras-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.extra{ border:1px dashed var(--border); border-radius:14px; padding:10px; background:#fff; display:grid; gap:8px; }
+.extra-img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:10px; background:#f2f2f2; }
+.extra-title{ margin:0; font-weight:700; font-family:'Inter',system-ui,sans-serif; }
+.extra-price{ color:var(--muted); font-size:13px; }
+.booking-inline{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:12px; }
+.booking-inline label{ display:grid; gap:6px; font-size:14px; color:#333; }
+.booking-inline input,.booking-inline select{
+  border:1px solid var(--border); border-radius:10px; padding:10px 12px; font-size:14px; background:#fff; font-family:'Inter',system-ui,sans-serif;
+}
+
+/* USPs */
+.usps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.usp{
+  background:#fff; border:1px solid var(--border); border-radius:14px; padding:12px;
+  display:flex; gap:8px; align-items:flex-start; box-shadow:0 6px 24px rgba(0,0,0,.03);
+  font-family:'Inter',system-ui,sans-serif;
+}
+.usp span:first-child{ font-size:18px; line-height:1; margin-top:2px; }
+
+/* =========================================================
+   RESPONSIVE (nur Content – keine Mobile-Navi)
+   ========================================================= */
+@media (max-width:980px){
+  .product-head .grid{ grid-template-columns:1fr; }
+  .gallery .main{ max-height:none; }
+  .extras-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .booking-inline{ grid-template-columns:1fr 1fr; }
+  .usps{ grid-template-columns:1fr; }
+}
+@media (max-width:560px){
+  .thumb img{ width:92px; height:68px; }
+  .extras-grid{ grid-template-columns:1fr; }
+  .booking-inline{ grid-template-columns:1fr; }
+}
+/* === Buttons exakt wie style.css === */
+.product-page .btn{
+  display: inline-block;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 5px;
+  border: none;
+  box-shadow: none !important;      /* überschreibt evtl. frühere Patches */
+  transition: filter .2s ease;
+}
+
+/* primary = rot */
+.product-page .btn.btn-primary{
+  background: var(--rot) !important;
+  color: #fff !important;
+  filter: none;
+}
+.product-page .btn.btn-primary:hover{
+  filter: brightness(0.95);
+}
+
+/* secondary = weiß mit grauem Rand */
+.product-page .btn.btn-secondary{
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #ddd !important;
+}
+.product-page .btn.btn-secondary:hover{
+  background: #f0f0f0;
+}
+
+/* WICHTIG: Kein erzwungenes Rot für „irgendwelche“ Buttons mehr */
+.product-page .card .btn:not(.btn-primary):not(.btn-secondary){
+  background: transparent !important;
+  color: inherit !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   EXTRAS → kompakt & schwebend
+   ========================= */
+
+/* Die große Karte entschlacken */
+.extras.card{
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Grid: flexible kleine Karten */
+.extras-grid{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+/* „Floating micro cards“ */
+.extra{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.extra:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.06);
+}
+
+/* kleines Thumbnail statt großer Kachel */
+.extra-img{
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #f2f2f2;
+}
+
+/* Textblock enger */
+.extra-info{ display:grid; gap:2px; }
+.extra-title{ margin:0; font-weight:700; font-size:14.5px; }
+.extra-price{ margin:0; color:var(--muted); font-size:13px; }
+
+/* Formularzeile unter den Extras: enger & unaufdringlich */
+.booking-inline{
+  grid-template-columns: 1fr 1fr 1fr auto; /* 3 Felder + Button */
+  gap: 8px;
+  margin-top: 12px;
+}
+.booking-inline label{
+  font-size: 13px;
+  color: #444;
+  gap: 4px;
+}
+.booking-inline input,
+.booking-inline select{
+  height: 40px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+#anfrage .btn.btn-primary{
+  height: 40px;
+  padding: 0 16px;
+}
+
+/* Hinweiszeile noch dezenter */
+#anfrage .note{
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: #888;
+}
+
+/* =========================
+   USPs → ohne Emojis, als leichte Pills
+   ========================= */
+
+/* Emojis (erstes span) ausblenden – HTML bleibt wie es ist */
+.usps .usp span:first-child{ display:none; }
+
+/* Layout schlanker, „Pill“-Look */
+.usps{
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+.usp{
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,.03);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: #333;
+  font-size: 14.5px;
+}
+.usp-icon{
+  width:18px; height:18px; border-radius:6px;
+  background: linear-gradient(180deg,#f7f7f7,#ededed);
+  border:1px solid #e6e6e6;
+  flex:0 0 18px;
+}
+
+/* Responsive Finetuning */
+@media (max-width: 980px){
+  .booking-inline{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px){
+  .extras-grid{ grid-template-columns: 1fr; }
+  .booking-inline{ grid-template-columns: 1fr; }
+}
+
+/* Footer mini */
+.footer {
+  margin-top: 48px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  color: #555;
+  font-size: 14px;
+}
+.footer .footer-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.footer a { color: inherit; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }

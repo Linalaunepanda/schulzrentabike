@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Citybikes mieten – Schulz & Junior</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!-- einfacher Header-Stub, du kannst deinen globalen Header hier reinziehen -->
+  <!-- FIXED HEADER (gleich wie Startseite) -->
+<header class="hero-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="css/images/logo1.png" alt="Schulz & Junior Logo" class="logo-img" />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="menu">
+        <li class="menu-item has-sub">
+          <a href="#" onclick="event.preventDefault()">Bikes</a>
+          <ul class="submenu">
+            <li><a href="category-citybikes.html">Citybikes</a></li>
+            <li><a href="category-trekking.html">Trekking</a></li>
+            <li><a href="category-ebikes.html">E-Bikes</a></li>
+          </ul>
+        </li>
+        <li class="menu-item has-sub">
+          <a href="#" onclick="event.preventDefault()">Motos</a>
+          <ul class="submenu">
+            <li><a href="category-moto-125.html">125cc</a></li>
+            <li><a href="category-moto-touring.html">Tourer</a></li>
+          </ul>
+        </li>
+        <li class="menu-item has-sub">
+          <a href="#" onclick="event.preventDefault()">Scooters</a>
+          <ul class="submenu">
+            <li><a href="category-scoot-50.html">50cc</a></li>
+            <li><a href="category-scoot-125.html">125cc</a></li>
+            <li><a href="category-scoot-electric.html">E-Scooter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="header-cta" href="#kontakt">Jetzt mieten</a>
+  </div>
+</header>
+
+<!-- PAGE HERO (für Kategorie/Produkt) -->
+<section class="page-hero-banner" style="--banner:url('images/page-hero-bikes.jpg')">
+  <div class="page-hero-inner">
+
+   <!-- PAGE HERO -->
+<section class="page-hero page-hero--citybikes">
+  <div class="inner">
+
+    <h1>Citybikes mieten</h1>
+    <p>Bequeme Allrounder für Strandpromenade & City – ideal für Cala Ratjada.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<main class="container" style="padding:24px 0 56px">
+  <div class="category-top">
+    <p class="category-desc">Wähle dein Modell und buche direkt über das Formular.</p>
+
+    <div class="filters" id="filters">
+      <button class="filter-pill active" data-filter="all">Alle</button>
+      <button class="filter-pill" data-filter="stepthrough">Tiefeinsteiger</button>
+      <button class="filter-pill" data-filter="7gang">7-Gang</button>
+      <button class="filter-pill" data-filter="ebike">E-Bike</button>
+    </div>
+  </div>
+
+  <div class="grid" id="catalog">
+    <!-- Beispielkarten -->
+    <article class="card" data-tags="7gang stepthrough">
+      <span class="kicker">Citybike</span>
+      <img src="css/images/CB1.png" alt="Hercules City 7-Gang">
+      <h3>Hercules City 7-Gang</h3>
+      <p class="meta"><span class="price">ab 12 €/Tag</span> · Nabenschaltung</p>
+      <a class="btn btn-primary" href="product-hercules-city-7.html">Details</a>
+    </article>
+
+    <article class="card" data-tags="ebike stepthrough">
+      <span class="kicker">E-City</span>
+      <img src="css/images/orbeaoptima.jpeg" alt="Orbea Optima 400Wh">
+      <h3>Orbea Optima 400Wh</h3>
+      <p class="meta"><span class="price">ab 22 €/Tag</span> · Reichweite bis 90 km</p>
+      <a class="btn btn-primary" href="product-orbea-optima-400.html">Details</a>
+    </article>
+
+    <article class="card" data-tags="7gang">
+      <span class="kicker">Citybike</span>
+      <img src="css/images/kalkoffagattu.jpeg" alt="Kalkhoff Agattu 7">
+      <h3>Kalkhoff Agattu 7</h3>
+      <p class="meta"><span class="price">ab 14 €/Tag</span> · Komfort-Sattel</p>
+      <a class="btn btn-primary" href="product-kalkhoff-agattu-7.html">Details</a>
+    </article>
+  </div>
+</main>
+
+ <footer>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">AGB</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <p>&copy; 2025 Schulz & Junior – Rent a Bike Mallorca</p>
+    </footer>
+
+<script>
+  const pills = document.querySelectorAll('.filter-pill');
+  const cards = document.querySelectorAll('#catalog .card');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      // Aktive Klasse setzen
+      pills.forEach(x => x.classList.remove('active'));
+      pill.classList.add('active');
+
+      const filter = pill.dataset.filter;
+
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').split(' ');
+
+        if (filter === 'all' || tags.includes(filter)) {
+          card.style.display = 'block';
+          card.style.opacity = 0;
+          setTimeout(() => { card.style.opacity = 1; }, 10); // sanft einblenden
+        } else {
+          card.style.opacity = 0;
+          setTimeout(() => { card.style.display = 'none'; }, 200); // nach Ausblenden verstecken
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

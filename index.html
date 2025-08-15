@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow" />
     <title>Schulz & Junior – Rent a Bike Mallorca</title>
 
     <!-- Google Fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,14 +33,36 @@
           />
         </a>
 
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#bikes">Bikes</a></li>
-            <li><a href="#motos">Motos</a></li>
-            <li><a href="#scooters">Scooters</a></li>
-          </ul>
-        </nav>
+   <nav class="main-nav">
+  <ul class="menu">
+    <li class="menu-item has-sub">
+      <a href="#" onclick="event.preventDefault()">Bikes</a>
+      <ul class="submenu">
+        <li><a href="category-citybikes.html">Citybikes</a></li>
+        <li><a href="#bikes-road">Rennräder</a></li>
+        <li><a href="#bikes-mountain">Mountainbikes</a></li>
+      </ul>
+    </li>
 
+    <li class="menu-item has-sub">
+      <a href="#" onclick="event.preventDefault()">Motos</a>
+      <ul class="submenu">
+        <li><a href="#motos">Alle Motos</a></li>
+        <li><a href="#motos-touring">Touring</a></li>
+        <li><a href="#motos-sport">Sport</a></li>
+      </ul>
+    </li>
+
+    <li class="menu-item has-sub">
+      <a href="#" onclick="event.preventDefault()">Scooters</a>
+      <ul class="submenu">
+        <li><a href="#scooters">Alle Scooter</a></li>
+        <li><a href="#scooters-electric">Elektroroller</a></li>
+        <li><a href="#scooters-classic">Klassisch</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
         <button
           class="header-cta"
           onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });"
@@ -58,214 +83,341 @@
     </section>
 
     <!-- SECTIONS -->
- <!-- KATALOG: FAHRRÄDER -->
-<section class="catalog">
-  <div class="catalog-header">
-    <h2>Fahrräder</h2>
-    <div class="catalog-actions">
-      <button class="arrow-btn" data-dir="left"  data-target="#carousel-bikes" aria-label="Zurück">‹</button>
-      <button class="arrow-btn" data-dir="right" data-target="#carousel-bikes" aria-label="Weiter">›</button>
+    <!-- KATALOG: FAHRRÄDER -->
+    <section class="catalog">
+      <div class="catalog-header">
+        <h2>Fahrräder</h2>
+        <div class="catalog-actions">
+          <button
+            class="arrow-btn"
+            data-dir="left"
+            data-target="#carousel-bikes"
+            aria-label="Zurück"
+          >
+            ‹
+          </button>
+          <button
+            class="arrow-btn"
+            data-dir="right"
+            data-target="#carousel-bikes"
+            aria-label="Weiter"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel" id="carousel-bikes">
+        <!-- Card -->
+        <article class="card">
+          <img src="css/images/CB1.png" alt="Citybike 26 Zoll" />
+          <h3>Citybike 26"</h3>
+          <p>ab 12 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+
+        <article class="card">
+          <img src="css/images/CB1.png" alt="E-Bike Pro" />
+          <h3>E-Bike Pro</h3>
+          <p>ab 22 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+
+        <article class="card">
+          <img src="css/images/MB1.png" alt="Trekkingbike" />
+          <h3>Trekkingbike</h3>
+          <p>ab 15 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+
+        <!-- weitere Cards ... -->
+      </div>
+    </section>
+
+    <!-- KATALOG: SCOOTER -->
+    <section class="catalog">
+      <div class="catalog-header">
+        <h2>Scooter</h2>
+        <div class="catalog-actions">
+          <button
+            class="arrow-btn"
+            data-dir="left"
+            data-target="#carousel-scooters"
+            aria-label="Zurück"
+          >
+            ‹
+          </button>
+          <button
+            class="arrow-btn"
+            data-dir="right"
+            data-target="#carousel-scooters"
+            aria-label="Weiter"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel" id="carousel-scooters">
+        <article class="card">
+          <img src="css/images/Scooter1.jpg" alt="50cc Scooter" />
+          <h3>50cc Scooter</h3>
+          <p>ab 18 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+        <article class="card">
+          <img src="css/images/Scooter2.jpg" alt="125cc Scooter" />
+          <h3>125cc Scooter</h3>
+          <p>ab 24 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+        <article class="card">
+          <img src="css/images/Scooter3.jpg" alt="E-Scooter" />
+          <h3>E-Scooter</h3>
+          <p>ab 20 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- KATALOG: MOTORRÄDER -->
+    <section class="catalog">
+      <div class="catalog-header">
+        <h2>Motorräder</h2>
+        <div class="catalog-actions">
+          <button
+            class="arrow-btn"
+            data-dir="left"
+            data-target="#carousel-motos"
+            aria-label="Zurück"
+          >
+            ‹
+          </button>
+          <button
+            class="arrow-btn"
+            data-dir="right"
+            data-target="#carousel-motos"
+            aria-label="Weiter"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel" id="carousel-motos">
+        <article class="card">
+          <img src="css/images/Moto1.jpg" alt="125cc Motorrad" />
+          <h3>125cc Motorrad</h3>
+          <p>ab 30 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+        <article class="card">
+          <img src="css/images/Moto2.jpeg" alt="250cc Enduro" />
+          <h3>250cc Enduro</h3>
+          <p>ab 45 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+        <article class="card">
+          <img src="css/images/moto3.jpeg" alt="Chopper" />
+          <h3>Chopper</h3>
+          <p>ab 55 €/Tag</p>
+          <a class="btn btn-primary" href="#">Details</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="brands" id="brands">
+      <div class="brands-inner">
+        <h2>Unsere Marken</h2>
+        <p class="brands-sub">
+          Ausgewählte Hersteller für Bikes, Scooter & Motorräder
+        </p>
+
+        <ul class="brand-grid" aria-label="Markenübersicht">
+          <!-- Ersetze die src-Pfade durch deine echten Logo-Dateien (SVG/PNG) -->
+          <li class="brand-card">
+            <img src="css/images/brands/trek.png" alt="Trek" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img src="css/images/brands/orbea.png" alt="Orbea" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img
+              src="css/images/brands/haibike.png"
+              alt="Haibike"
+              loading="lazy"
+            />
+          </li>
+          <li class="brand-card">
+            <img
+              src="css/images/brands/hercules.png"
+              alt="Hercules"
+              loading="lazy"
+            />
+          </li>
+          <li class="brand-card">
+            <img src="images/brands/piaggio.svg" alt="Piaggio" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img src="images/brands/vespa.svg" alt="Vespa" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img src="images/brands/aprilia.svg" alt="Aprilia" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img src="images/brands/yamaha.svg" alt="Yamaha" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img src="images/brands/suzuki.svg" alt="Suzuki" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img
+              src="images/brands/kawasaki.svg"
+              alt="Kawasaki"
+              loading="lazy"
+            />
+          </li>
+          <li class="brand-card">
+            <img
+              src="images/brands/motoguzzi.svg"
+              alt="Moto Guzzi"
+              loading="lazy"
+            />
+          </li>
+          <li class="brand-card">
+            <img src="css/images/brands/derbi.png" alt="Derbi" loading="lazy" />
+          </li>
+          <li class="brand-card">
+            <img src="images/brands/gilera.svg" alt="Gilera" loading="lazy" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="hotel-offer">
+      <a
+        href="https://www.o7hotels.com/es/o7-alondra.html?utm_source=google&utm_medium=organic&utm_campaign=gmb"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="palm">🌴</span>
+        Du suchst noch ein Hotel?<br /><strong
+          >Hier gibt’s ein tolles Angebot!</strong
+        >
+      </a>
     </div>
-  </div>
 
-  <div class="carousel" id="carousel-bikes">
-    <!-- Card -->
-    <article class="card">
-      <img src="css/images/CB1.png" alt="Citybike 26 Zoll">
-      <h3>Citybike 26"</h3>
-      <p>ab 12 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
+    <section class="contact" id="kontakt">
+      <div class="contact-inner">
+        <h2>Jetzt mieten</h2>
+        <p class="contact-sub">
+          Schreib uns deine Anfrage – wir melden uns schnellstmöglich zurück.
+        </p>
 
-    <article class="card">
-      <img src="css/images/CB1.png" alt="E-Bike Pro">
-      <h3>E-Bike Pro</h3>
-      <p>ab 22 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
+        <form
+          action="mailto:info@deine-mailadresse.com"
+          method="post"
+          enctype="text/plain"
+          class="contact-form"
+        >
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Dein Name"
+              required
+            />
+          </div>
 
-    <article class="card">
-      <img src="css/images/MB1.png" alt="Trekkingbike">
-      <h3>Trekkingbike</h3>
-      <p>ab 15 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
+          <div class="form-group">
+            <label for="email">E-Mail*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="dein@email.com"
+              required
+            />
+          </div>
 
-    <!-- weitere Cards ... -->
-  </div>
-</section>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+34 600 000 000"
+            />
+          </div>
 
-<!-- KATALOG: SCOOTER -->
-<section class="catalog">
-  <div class="catalog-header">
-    <h2>Scooter</h2>
-    <div class="catalog-actions">
-      <button class="arrow-btn" data-dir="left"  data-target="#carousel-scooters" aria-label="Zurück">‹</button>
-      <button class="arrow-btn" data-dir="right" data-target="#carousel-scooters" aria-label="Weiter">›</button>
-    </div>
-  </div>
+          <div class="form-group">
+            <label for="category">Fahrzeugkategorie*</label>
+            <select id="category" name="category" required>
+              <option value="">Bitte wählen…</option>
+              <option value="bike">Fahrrad</option>
+              <option value="scooter">Scooter</option>
+              <option value="moto">Motorrad</option>
+            </select>
+          </div>
 
-  <div class="carousel" id="carousel-scooters">
-    <article class="card">
-      <img src="css/images/Scooter1.jpg" alt="50cc Scooter">
-      <h3>50cc Scooter</h3>
-      <p>ab 18 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
-    <article class="card">
-      <img src="css/images/Scooter2.jpg" alt="125cc Scooter">
-      <h3>125cc Scooter</h3>
-      <p>ab 24 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
-    <article class="card">
-      <img src="css/images/Scooter3.jpg" alt="E-Scooter">
-      <h3>E-Scooter</h3>
-      <p>ab 20 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
-  </div>
-</section>
+          <div class="form-group">
+            <label for="message">Nachricht*</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Wann möchtest du mieten? Für wie lange?"
+              rows="5"
+              required
+            ></textarea>
+          </div>
 
-<!-- KATALOG: MOTORRÄDER -->
-<section class="catalog">
-  <div class="catalog-header">
-    <h2>Motorräder</h2>
-    <div class="catalog-actions">
-      <button class="arrow-btn" data-dir="left"  data-target="#carousel-motos" aria-label="Zurück">‹</button>
-      <button class="arrow-btn" data-dir="right" data-target="#carousel-motos" aria-label="Weiter">›</button>
-    </div>
-  </div>
-
-  <div class="carousel" id="carousel-motos">
-    <article class="card">
-      <img src="css/images/Moto1.jpg" alt="125cc Motorrad">
-      <h3>125cc Motorrad</h3>
-      <p>ab 30 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
-    <article class="card">
-      <img src="css/images/Moto2.jpeg" alt="250cc Enduro">
-      <h3>250cc Enduro</h3>
-      <p>ab 45 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
-    <article class="card">
-      <img src="css/images/moto3.jpeg" alt="Chopper">
-      <h3>Chopper</h3>
-      <p>ab 55 €/Tag</p>
-      <a class="btn btn-primary" href="#">Details</a>
-    </article>
-  </div>
-</section>
-
-<section class="brands" id="brands">
-  <div class="brands-inner">
-    <h2>Unsere Marken</h2>
-    <p class="brands-sub">Ausgewählte Hersteller für Bikes, Scooter & Motorräder</p>
-
-    <ul class="brand-grid" aria-label="Markenübersicht">
-      <!-- Ersetze die src-Pfade durch deine echten Logo-Dateien (SVG/PNG) -->
-      <li class="brand-card">
-        <img src="css/images/brands/trek.png" alt="Trek" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="css/images/brands/orbea.png" alt="Orbea" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="css/images/brands/haibike.png" alt="Haibike" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="css/images/brands/hercules.png" alt="Hercules" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/piaggio.svg" alt="Piaggio" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/vespa.svg" alt="Vespa" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/aprilia.svg" alt="Aprilia" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/yamaha.svg" alt="Yamaha" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/suzuki.svg" alt="Suzuki" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/kawasaki.svg" alt="Kawasaki" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/motoguzzi.svg" alt="Moto Guzzi" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="css/images/brands/derbi.png" alt="Derbi" loading="lazy">
-      </li>
-      <li class="brand-card">
-        <img src="images/brands/gilera.svg" alt="Gilera" loading="lazy">
-      </li>
-    </ul>
-  </div>
-</section>
-
-<div class="hotel-offer">
-  <a href="https://www.o7hotels.com/es/o7-alondra.html?utm_source=google&utm_medium=organic&utm_campaign=gmb" target="_blank" rel="noopener noreferrer">
-    <span class="palm">🌴</span>
-    Du suchst noch ein Hotel?<br><strong>Hier gibt’s ein tolles Angebot!</strong>
-  </a>
-</div>
-
-<section class="contact" id="kontakt">
-  <div class="contact-inner">
-    <h2>Jetzt mieten</h2>
-    <p class="contact-sub">Schreib uns deine Anfrage – wir melden uns schnellstmöglich zurück.</p>
-
-    <form action="mailto:info@deine-mailadresse.com" method="post" enctype="text/plain" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="name" placeholder="Dein Name" required>
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        </form>
       </div>
-      
-      <div class="form-group">
-        <label for="email">E-Mail*</label>
-        <input type="email" id="email" name="email" placeholder="dein@email.com" required>
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
-      </div>
-
-      <div class="form-group">
-        <label for="category">Fahrzeugkategorie*</label>
-        <select id="category" name="category" required>
-          <option value="">Bitte wählen…</option>
-          <option value="bike">Fahrrad</option>
-          <option value="scooter">Scooter</option>
-          <option value="moto">Motorrad</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Nachricht*</label>
-        <textarea id="message" name="message" placeholder="Wann möchtest du mieten? Für wie lange?" rows="5" required></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Anfrage senden</button>
-    </form>
-  </div>
-</section>
+    </section>
 
     <!-- FOOTER -->
     <footer>
-  <div class="footer-links">
-    <a href="impressum.html">Impressum</a>
-    <a href="agb.html">AGB</a>
-    <a href="datenschutz.html">Datenschutz</a>
-  </div>
-  <p>&copy; 2025 Schulz & Junior – Rent a Bike Mallorca</p>
-</footer>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">AGB</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <p>&copy; 2025 Schulz & Junior – Rent a Bike Mallorca</p>
+    </footer>
+
+<script>
+  // Mobile: Hauptpunkt klick -> öffnet/Schließt eigenes Dropdown
+  document.querySelectorAll(".menu-item.has-sub > a").forEach(link=>{
+    link.addEventListener("click",(e)=>{
+      if (window.innerWidth < 768){
+        e.preventDefault();
+        const li = link.parentElement;
+        // andere schließen
+        document.querySelectorAll(".menu-item.has-sub").forEach(x=>{
+          if (x!==li) x.classList.remove("open");
+        });
+        li.classList.toggle("open");
+      }
+    });
+  });
+
+  // außerhalb klicken -> schließen (mobil)
+  document.addEventListener("click",(e)=>{
+    if (window.innerWidth < 768 && !e.target.closest(".main-nav")){
+      document.querySelectorAll(".menu-item.has-sub.open").forEach(x=>x.classList.remove("open"));
+    }
+  });
+
+  // ESC schließt (mobil)
+  document.addEventListener("keydown",(e)=>{
+    if (e.key==="Escape" && window.innerWidth < 768){
+      document.querySelectorAll(".menu-item.has-sub.open").forEach(x=>x.classList.remove("open"));
+    }
+  });
+</script>
 
     <!-- JavaScript Header-->
 
@@ -282,15 +434,16 @@
     </script>
 
     <script>
-  // horizontales Scrollen per Pfeilbuttons
-  document.querySelectorAll('.arrow-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = document.querySelector(btn.dataset.target);
-      const dir = btn.dataset.dir === 'right' ? 1 : -1;
-      const step = target.querySelector('.card')?.getBoundingClientRect().width || 280;
-      target.scrollBy({ left: dir * (step + 16), behavior: 'smooth' }); // +gap
-    });
-  });
-</script> 
+      // horizontales Scrollen per Pfeilbuttons
+      document.querySelectorAll(".arrow-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = document.querySelector(btn.dataset.target);
+          const dir = btn.dataset.dir === "right" ? 1 : -1;
+          const step =
+            target.querySelector(".card")?.getBoundingClientRect().width || 280;
+          target.scrollBy({ left: dir * (step + 16), behavior: "smooth" }); // +gap
+        });
+      });
+    </script>
   </body>
 </html>
